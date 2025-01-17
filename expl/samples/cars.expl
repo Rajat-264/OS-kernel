@@ -1,0 +1,32 @@
+type
+	car{
+	str company;
+	str model;
+	str typ;
+	int rating;
+	}
+endtype
+
+int main()
+{
+	decl
+		car s1,s2,s3,s4,s5;
+		int temp,val,i;
+	enddecl
+	begin
+		val = initialize();
+		s1 = alloc();
+		s1.company = "Suzuki";
+		s1.model = "Ertiga";
+		s1.typ = "Coop";
+		s1.rating = 4;
+		temp = exposcall("Write",-2, s1.company);
+		temp = exposcall("Write",-2, s1.model);
+		temp = exposcall("Write",-2, s1.typ);
+		temp = exposcall("Write",-2, s1.rating);
+				
+		return 0;
+	end
+}
+	
+	
